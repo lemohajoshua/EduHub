@@ -1,0 +1,6 @@
+const firstName = document.querySelector("#fname")
+const otherName = document.querySelector("oname")
+const lastName = document.querySelector("lname")
+const regNumber = document.querySelector("reg-no")
+const email = document.querySelector("email")
+const password = document.querySelector("password")
