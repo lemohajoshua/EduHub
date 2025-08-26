@@ -7,10 +7,15 @@
     <link rel="stylesheet" href="student register.css">
 </head>
 <body>
-    <!-- <h1 class="company-name">EduHub</h1> -->
+        <a href="" class="back-to-home-link">
+            <div class="back-to-home">
+                <img src="asset/register-return-arrow.png">
+                <p>Home</p>
+            </div>
+        </a>
     <!-- parent div -->
     <div class="parent">
-        <img src="asset/hardworking-excited-african-american-student-feeling-happy.jpg" class="parent-image">
+        <img src="asset/register-parent-img.jpg" class="parent-image">
         <!-- first child -->
         <div class="first-child">
             <div class="first-child-content">
@@ -24,15 +29,35 @@
 
             <!-- <p>Please enter correct details</p> -->
             <form action="" class="student-form">
-                <input type="text" id="fname" name="fname" placeholder="First Name">
-                <input type="text" id="oname" name="oname" placeholder="Other Name">
-                <input type="text" id="lname" name="lname" placeholder="Last Name">
-                <input type="text" id="reg-no" name="reg-no" placeholder="Reg Number">
-                <input type="email" id="email" name="email" placeholder="Email">
-                <input type="password" id="password" name="password" placeholder="Password">
-                <button>Register</button>
+                <div class="input-container">
+                    <input type="text" id="fname" name="fname" placeholder="First Name">
+                    <p class="error"></p>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="oname" name="oname" placeholder="Other Name">
+                    <p class="error"></p>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="lname" name="lname" placeholder="Last Name">
+                    <p class="error"></p>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="reg-no" name="reg-no" placeholder="Reg Number">
+                    <p class="error"></p>
+                </div>
+                <div class="input-container">
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <p class="error"></p>
+                </div>
+                <div class="input-container">
+                    <input type="password" id="password" name="password" placeholder="Pass****">
+                    <p class="error"></p>
+                </div>
+                <div class="button">
+                    <button>Register</button>
+                </div>
             </form>
-            <p>already have an account <a href="">click here</a> to Login</p>
+            <p class="login-link">already have an account <a href="">click here</a> to Login</p>
         </div>
     </div>
     <script src="student register.js"></script>
