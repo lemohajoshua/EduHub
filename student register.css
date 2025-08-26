@@ -1,62 +1,92 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: poppins;
-}
-body {
-    /* align-content: center; */
-    /* padding: 60px; */
-    
+    font-family: Poppins, sans-serif;
+    box-sizing: border-box;
 }
 
+/* Back to Home */
+.back-to-home-link {
+    text-decoration: none;
+}
+.back-to-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: fit-content;
+    padding: 0.5rem 0.5rem;
+    margin: 1rem 3rem;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+.back-to-home:hover {
+    border: 0.1rem solid #FCD980;
+}
+.back-to-home img {
+    height: 1.5rem;
+}
+.back-to-home p {
+    color: black;
+    font-size: 1.2rem;
+}
+
+/* Parent Layout */
 .parent {
     display: flex;
     justify-content: center;
     width: 95vw;
-    height: 95vh;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    height: 90vh;
     margin: auto;
+    position: relative;
+    overflow: hidden;
 }
 .parent-image {
     position: absolute;
-    width: 95vw;
-    height: 95vh;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     z-index: -1;
 }
 .first-child {
-    display: grid;
+    display: flex;
     align-items: center;
-    width: 50%;
-    padding: 10rem;
+    justify-content: center;
+    flex: 1;
+    padding: 5rem;
     background-color: #1c1e537a;
     color: white;
 }
 .first-child-content {
+    max-width: 600px;
     opacity: 0;                       /* Start invisible */
     transform: translateX(-100%);     /* Start off-screen to the left */
-    animation: slideIn 1s ease-out forwards;
+    animation: slideIn 1.5s ease-out forwards;
 }
 @keyframes slideIn {
   to {
-    opacity: 1;                     /* Fade in */
-    transform: translateX(0);       /* End at normal position */
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 .first-child h1 {
     margin-bottom: 1rem;
-    font-size: 50px;
+    font-size: 2.5rem;
 }
+
+/* Right side (form) */
 .second-child {
     background-color: #1C1E53;
-    width: 50%;
-    padding: 10rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 5rem;
 }
 .second-child h1{
     margin-bottom: 2rem;
+    margin-top: 3rem;
     text-align: center;
     color: white;
     text-decoration: underline;
@@ -64,36 +94,100 @@ body {
 .student-form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2.5rem;
 }
 .student-form input {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: transparent;
     border: 0.1rem solid white;
+    width: 90%;
+    display: grid;
+    margin: auto;
+    max-width: 100%;
     padding: 1rem;
     color: white;
     border-radius: 0.5rem;
 }
+.student-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
 .second-child input:hover {
     border: 0.1rem solid #FCD980;
 }
-.student-form input::placeholder {
-    color: rgba(255, 255, 255, 0.603);
-}
 .student-form button {
     padding: 1rem;
+    width: 90%;
+    display: grid;
+    margin: auto;
     border-radius: 0.5rem;
     cursor: pointer;
     background-color: #FCD980;
+    border: none;
+    font-weight: bold;
+    transition: 0.3s ease;
 }
 .student-form button:hover {
     background-color: rgba(255, 255, 255, 0.342);
     color: white;
     border: 0.1rem solid white;
 }
-.second-child p {
-    color: white;
-    text-align: center;
-}
+
 .second-child a {
     color: #FCD980;
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: -20px;
+    align-items: start;
+}
+
+.error {
+  font-size: 0.8rem;
+  color: red;
+  margin-left: 40px;
+  margin-top: 0 !important;
+}
+.login-link {
+    color: white;
+    text-align: center;
+    margin-top: 1rem;margin-bottom: 3rem;
+}
+
+
+@media (max-width: 992px) {
+    .parent {
+        flex-direction: column;
+        height: auto;
+    }
+    .first-child {
+        width: 100%;
+        padding: 3rem 1.5rem;
+        text-align: center;
+    }
+    .first-child h1 {
+        font-size: 2rem;
+    }
+    .second-child {
+        width: 100%;
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .first-child {
+        padding: 2rem 1rem;
+    }
+    .first-child h1 {
+        font-size: 1.6rem;
+    }
+    .first-child-content p {
+        font-size: 0.9rem;
+    }
+    .student-form input, 
+    .student-form button {
+        width: 100%;
+        font-size: 0.95rem;
+        padding: 0.8rem;
+    }
 }
