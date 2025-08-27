@@ -3,9 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>EduHub</title>
+    <link rel="stylesheet" href="lecturer register.css">
 </head>
 <body>
-    
+        <a href="" class="back-to-home-link">
+            <div class="back-to-home">
+                <img src="asset/register-return-arrow.png">
+                <p>Home</p>
+            </div>
+        </a>
+    <!-- parent div -->
+    <div class="parent">
+        <img src="asset/lecturer register img.jpeg" class="parent-image">
+        <!-- first child -->
+        <div class="first-child">
+            <div class="first-child-content">
+                <h1>Making Learning Easy!!</h1>
+                <p>Upload collection of textbooks, lecture notes, and eductional resoureces for effective learning. Whether you are a student seeking reliable study materials or a lecturer sharing knowledge, we make learning seamless, organized, and impactful.</p>
+            </div>
+        </div>
+        <!-- second child -->
+        <div class="second-child">
+            <h1>Register as Lecturer</h1>
+
+            <!-- <p>Please enter correct details</p> -->
+            <form action="" class="student-form">
+                <div class="input-container">
+                    <input type="text" id="fname" name="fname" placeholder="First Name">
+                    <p class="error"></p>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="lname" name="lname" placeholder="Last Name">
+                    <p class="error"></p>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="staffId" name="staffId" placeholder="Staff ID">
+                    <p class="error"></p>
+                </div>
+                <div class="input-container">
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <p class="error"></p>
+                </div>
+                <div class="input-container">
+                    <input type="password" id="password" name="password" placeholder="Pass****">
+                    <p class="error"></p>
+                </div>
+                <div class="button">
+                    <button>Register</button>
+                </div>
+            </form>
+            <p class="login-link">already have an account <a href="">click here</a> to Login</p>
+        </div>
+    </div>
+    <script src="lecturer register.js"></script>
 </body>
 </html>
